@@ -16,7 +16,7 @@ func main() {
 
 func SendMP3(){
 	bot, err := tb.NewBot(tb.Settings{
-		Token: "1514859884:AAEQpQkXr1iMAcH6BvQ70Q_-RMHREP9y79A",
+		Token: os.Getenv("BOT_TOKEN"),
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 	if err != nil {
