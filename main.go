@@ -17,7 +17,6 @@ func main() {
 func SendMP3(){
 	bot, err := tb.NewBot(tb.Settings{
 		Token: os.Getenv("BOT_TOKEN"),
-		URL: "https://yt2mp3-telegram.herokuapp.com",
 		Poller: &tb.LongPoller{Timeout: 10 * time.Second},
 	})
 	if err != nil {
