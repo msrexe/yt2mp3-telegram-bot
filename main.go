@@ -44,6 +44,7 @@ func SendMP3(){
 				bot.Send(m.Sender,mp3)
 				os.RemoveAll(dir)
 			}else{
+				log.Println(err)
 				bot.Send(m.Sender,"Video bulunamadı. Kaldırılmış veya hatalı URL olabilir!!")
 			}
 		}else{
