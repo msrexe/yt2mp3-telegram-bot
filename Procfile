@@ -1,1 +1,1 @@
-worker: main.go
+worker: bin/main
