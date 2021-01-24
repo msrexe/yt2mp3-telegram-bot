@@ -57,7 +57,8 @@ func SendMP3(){
 func downloadMP3(url string) error{
 	command1 := exec.Command("cd","bin/utils/")
 	command2 := exec.Command("youtube-dl","-x","--audio-format","mp3","-o","/file.mp4",url)
-	command1.Run()
+	log.Println(exec.Command("ls").Run())
+	log.Println(command1.Run())
 	_,err := command2.Output()
 	return err
 }
