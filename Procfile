@@ -1,1 +1,1 @@
-web: main
+worker: main
