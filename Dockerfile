@@ -1,11 +1,10 @@
 FROM golang:1.14-alpine
-RUN mkdir /src
-WORKDIR /src
+#RUN apk add --no-cache youtube-dl && apk add --no-cache ffmpeg
+WORKDIR /usr/src
 COPY . .
 RUN go get ./...
 RUN go build -o /app .
 
-# vimagick/youtube-dl contains ffmpeg, youtube-dl.
-FROM vimagick/youtube-dl
+FROM jauderho/youtube-dl
 COPY --from=0 /app /app
 ENTRYPOINT ["/app"]
