@@ -30,7 +30,7 @@ func Handlers(){
 		//**********************************************
 
 		bot.Handle("/start", func(m *tb.Message) {
-			bot.Send(m.Sender, "İndirmek istediğiniz YouTube linkini gönderin")
+			bot.Send(m.Sender, "İndirmek istediğiniz YouTube linkini gönderin.\n Bilgi için /help")
 		})
 
 		bot.Handle("/help", func(m *tb.Message) {
